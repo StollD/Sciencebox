@@ -168,5 +168,13 @@ namespace Sciencebox
 
             ScienceboxApplicator.isActive = true;
         }
+
+        /// <summary>
+        /// Remove the callback
+        /// </summary>
+        void OnDestroy()
+        {
+            GameEvents.onGameStateCreated.Remove(OnGameStateCreated);
+        }
     }
 }
